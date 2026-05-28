@@ -1,0 +1,25 @@
+profileVersion = "v1"
+start_online = true
+
+[[supports]]
+game = "nightrein"
+
+[[packages]] 
+path = 'mod'
+
+[[natives]] 
+path = 'mod/dllMods/cl_server_redirector.dll'
+load_early = true
+
+[[natives]] 
+path = 'mod/dllMods/smoke_api64.dll'
+load_early = true
+
+[[natives]] 
+path = 'mod/dllMods/UnlockTheFps.dll'
+
+[[natives]] 
+path = 'mod/dllMods/UltrawideFix.dll'
+
+[[natives]] 
+path = 'mod/dllMods/StormControl.dll'

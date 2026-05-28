@@ -1,0 +1,28 @@
+# Ignore all files and folders inside mod/DLC
+mod/DLC/
+
+# Ignore backup files
+*.bak
+
+# Ignore extracted DCX folders
+mod/*-dcx/
+mod/**/*-dcx/
+
+# Ignore large binary game assets
+*.tpfbdt
+*.dcx
+*.ffxbnd
+*.texbnd
+*.dds
+
+# Logs and temp files
+*.log
+*.prev
+desktop.ini
+
+# Compiled/binary mod files you may not want tracked
+*.exe
+*.dll
+*.so
+
+mod/.smithbox/

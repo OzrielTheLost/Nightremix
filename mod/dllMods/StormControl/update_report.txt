@@ -1,0 +1,4 @@
+StormControl update diagnostics
+Reason: time_multiplier pattern not found
+Version: 1.0.1
+Game base: 0x0000000000000000
