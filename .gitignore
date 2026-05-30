@@ -23,5 +23,11 @@ desktop.ini
 *.exe
 *.dll
 *.so
+*.py
 
 mod/.smithbox/
+# Auto-ignored large file split by pre-push tool
+mod/menu/00_solo_h.tpfbdt
+
+# Auto-ignored large file split by pre-push tool
+mod/sfx/sfxbnd_c0000.ffxbnd.dcx
