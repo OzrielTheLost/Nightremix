@@ -9,8 +9,6 @@ mod/*-dcx/
 mod/**/*-dcx/
 
 # Ignore large binary game assets
-*.tpfbdt
-*.ffxbnd
 *.texbnd
 *.dds
 
@@ -20,8 +18,6 @@ mod/**/*-dcx/
 desktop.ini
 
 # Compiled/binary mod files you may not want tracked
-*.exe
-*.dll
 *.so
 *.py
 
