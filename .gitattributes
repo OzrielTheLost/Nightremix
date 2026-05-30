@@ -1,3 +1,0 @@
-mod/sfx/** filter=lfs diff=lfs merge=lfs -text
-mod/chr/** filter=lfs diff=lfs merge=lfs -text
-/mod/sfx/sfxbnd_c0000.ffxbnd.dcx filter=lfs diff=lfs merge=lfs -text
