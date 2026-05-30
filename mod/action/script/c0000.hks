@@ -74,6 +74,36 @@
 ------------------------------------------
 -- Core: Functions
 ------------------------------------------
+function Modpage()
+    if env(GetSpEffectID, 690001) == TRUE then
+        openurl(690001, "www.nexusmods.com/eldenringnightreign/mods/578")
+		act(Wait)
+    end
+end
+
+function Discord()
+    if env(GetSpEffectID, 690002) == TRUE then
+        openurl2(690002)
+		act(Wait)
+    end
+end
+
+function Patreon()
+    if env(GetSpEffectID, 690003) == TRUE then
+        openurl(690003, "patreon.com/DaybreakTeam?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink")
+		act(Wait)
+    end
+end
+
+function openurl(spEffect, url)
+    act(ClearSpEffect, spEffect)
+    os.execute('start "link" "https://' .. url .. '/"')
+end
+
+function openurl2(spEffect, url)
+    act(ClearSpEffect, spEffect)
+    os.execute('start "link" "https://discord.gg/mMWgsdTnWw"')
+end
 function ExecEvent(state)
     ResetRequest()
     hkbFireEvent(state)
@@ -2509,13 +2539,13 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if GetEquipType(atk_hand, WEAPON_CATEGORY_STAFF, WEAPON_CATEGORY_SMALL_ARROW, WEAPON_CATEGORY_ARROW, WEAPON_CATEGORY_LARGE_ARROW, WEAPON_CATEGORY_CROSSBOW, WEAPON_CATEGORY_BALLISTA) == FALSE and env(ActionRequest, ACTION_ARM_R2) == TRUE then
             if c_Style == HAND_RIGHT_BOTH or c_Style == HAND_LEFT_BOTH then
 				 -- Guardian Unique Halberd Charged Guard Counter 2H
-                if  GetEquipType(atk_hand, WEAPON_CATEGORY_HALBERD, WEAPON_CATEGORY_SPEAR, WEAPON_CATEGORY_LARGE_SPEAR, WEAPON_CATEGORY_LARGE_RAPIER) == TRUE and env(GetHeroID) == HERO_TANK then -- << xzNUM_Expanded_Guardian GC_01
+                if  GetEquipType(atk_hand, WEAPON_CATEGORY_HALBERD, WEAPON_CATEGORY_SPEAR, WEAPON_CATEGORY_LARGE_SPEAR, WEAPON_CATEGORY_LARGE_RAPIER, WEAPON_CATEGORY_RAPIER) == TRUE and env(GetHeroID) == HERO_TANK then
                     ExecEventAllBody("W_AttackBothHeavyCounterStart")
                 else
                     ExecEventAllBody("W_AttackBothHeavyCounter")
                 end
 			-- Guardian Unique Halberd Charged Guard Counter 1H
-            elseif GetEquipType(atk_hand, WEAPON_CATEGORY_HALBERD, WEAPON_CATEGORY_SPEAR, WEAPON_CATEGORY_LARGE_SPEAR, WEAPON_CATEGORY_LARGE_RAPIER) == TRUE and env(GetHeroID) == HERO_TANK then -- << xzNUM_Expanded_Guardian GC_02
+            elseif  GetEquipType(atk_hand, WEAPON_CATEGORY_HALBERD, WEAPON_CATEGORY_SPEAR, WEAPON_CATEGORY_LARGE_SPEAR, WEAPON_CATEGORY_LARGE_RAPIER, WEAPON_CATEGORY_RAPIER) == TRUE and env(GetHeroID) == HERO_TANK then
                 ExecEventAllBody("W_AttackRightHeavyCounterStart")
             else
                 ExecEventAllBody("W_AttackRightHeavyCounter")
@@ -16166,7 +16196,7 @@ function FookShotMove_onUpdate()
     if c_Style == HAND_LEFT_BOTH then
         attackHand = HAND_LEFT
     end
-	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD)
+	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
     if env(GetSpEffectID, 700510) == TRUE then
         r1 = "W_AttackRightLightDash"
         r2 = "W_AttackRightHeavyDash"
@@ -16205,7 +16235,7 @@ function FookShotMoveBreak_onUpdate()
     if c_Style == HAND_LEFT_BOTH then
         attackHand = HAND_LEFT
     end
-    local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
+	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
     if env(GetSpEffectID, 700510) == TRUE then
         r1 = "W_AttackRightLightDash"
         r2 = "W_AttackRightHeavyDash"
@@ -16238,7 +16268,7 @@ function FookShotPull_onUpdate()
     if c_Style == HAND_LEFT_BOTH then
         attackHand = HAND_LEFT
     end
-    local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
+	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
     if env(GetSpEffectID, 700510) == TRUE then
         r1 = "W_AttackRightLightDash"
         r2 = "W_AttackRightHeavyDash"
@@ -16330,7 +16360,7 @@ function AirFookShotMove_onUpdate()
     if c_Style == HAND_LEFT_BOTH then
         attackHand = HAND_LEFT
     end
-    local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
+	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
     if env(GetSpEffectID, 700510) == TRUE then
         r1 = "W_AttackRightLightDash"
         r2 = "W_AttackRightHeavyDash"
@@ -16363,7 +16393,7 @@ function AirFookShotPull_onUpdate()
     if c_Style == HAND_LEFT_BOTH then
         attackHand = HAND_LEFT
     end
-    local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
+	local is_large_sword = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SWORD, WEAPON_CATEGORY_LARGE_AX, WEAPON_CATEGORY_LARGE_HAMMER, WEAPON_CATEGORY_LARGE_CURVEDSWORD, WEAPON_CATEGORY_EXTRALARGE_SWORD) -- << xzNUM_Expanded_Wylder ATKs_03
     if env(GetSpEffectID, 700510) == TRUE then
         r1 = "W_AttackRightLightDash"
         r2 = "W_AttackRightHeavyDash"
@@ -22901,6 +22931,9 @@ function Update()
         end
     end
     g_FrameCount = g_FrameCount + 1
+	Modpage()
+	Discord()
+	Patreon()	  
 end
 
 function ContainDs3Dual(sp_kind) -- Check if it's a dual wielded ds3 weapon such as sellsword twinblades
