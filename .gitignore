@@ -1,5 +1,3 @@
-# Ignore all files and folders inside mod/DLC
-mod/DLC/
 
 # Ignore backup files
 *.bak
@@ -27,3 +25,6 @@ mod/menu/00_solo_h.tpfbdt
 
 # Auto-ignored large file split by pre-push tool
 mod/sfx/sfxbnd_c0000.ffxbnd.dcx
+
+# Auto-ignored large file split by pre-push tool
+mod/DLC/dlc01.bdt
