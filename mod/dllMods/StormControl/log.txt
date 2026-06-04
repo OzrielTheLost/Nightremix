@@ -1,21 +1,21 @@
 ================================================================================
   StormControl v1.0.5
-  Started: Jun 01, 2026 | 02:39:30 AM
+  Started: Jun 01, 2026 | 10:38:56 PM
 ================================================================================
-[Jun 01, 2026 | 02:39:30 AM] INFO  | Initializing...
-[Jun 01, 2026 | 02:39:30 AM] INFO  | Config file loaded successfully
-[Jun 01, 2026 | 02:39:30 AM] INFO  | StormControl version 1.0.5 configured. Log level=info
-[Jun 01, 2026 | 02:39:30 AM] INFO  | Initial Time Multiplier (Raw): 1000
-[Jun 01, 2026 | 02:39:31 AM] INFO  | Unique signature found at 00007ff6a1928430
-[Jun 01, 2026 | 02:39:31 AM] INFO  | Found pattern at: 140697249416240
-[Jun 01, 2026 | 02:39:31 AM] INFO  | Time multiplier patch applied successfully!
-[Jun 01, 2026 | 02:39:31 AM] INFO  | Time multiplier: x1
-[Jun 01, 2026 | 02:39:32 AM] INFO  | Unique signature found at 00007ff6a33e98ed
-[Jun 01, 2026 | 02:39:32 AM] INFO  | Menu title hook installed at 140697277470957
-[Jun 01, 2026 | 02:39:32 AM] INFO  | Mod initialized successfully!
-[Jun 01, 2026 | 02:39:33 AM] INFO  | RenderHookThread started. Waiting for game to initialize...
-[Jun 01, 2026 | 02:39:33 AM] INFO  | Finding application window...
-[Jun 01, 2026 | 02:39:37 AM] INFO  | Kiero initialized with DX12. Bound Present + ExecuteCommandLists.
-[Jun 01, 2026 | 02:39:39 AM] INFO  | Found application window: ELDEN RING NIGHTREIGN (hwnd=0x00000000005006da, method=enumeration, attempts=1, elapsed_ms=0)
-[Jun 01, 2026 | 02:39:41 AM] INFO  | ImGui (DX12) initialized successfully.
-[Jun 01, 2026 | 02:45:59 AM] INFO  | Auto-Calibration: Captured vanilla speed baseline = 72.9
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Initializing...
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Config file loaded successfully
+[Jun 01, 2026 | 10:38:56 PM] INFO  | StormControl version 1.0.5 configured. Log level=info
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Initial Time Multiplier (Raw): 1000
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Unique signature found at 00007ff780c28430
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Found pattern at: 140700993881136
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Time multiplier patch applied successfully!
+[Jun 01, 2026 | 10:38:56 PM] INFO  | Time multiplier: x1
+[Jun 01, 2026 | 10:38:57 PM] INFO  | Unique signature found at 00007ff7826e98ed
+[Jun 01, 2026 | 10:38:57 PM] INFO  | Menu title hook installed at 140701021935853
+[Jun 01, 2026 | 10:38:57 PM] INFO  | Mod initialized successfully!
+[Jun 01, 2026 | 10:38:57 PM] INFO  | RenderHookThread started. Waiting for game to initialize...
+[Jun 01, 2026 | 10:38:57 PM] INFO  | Finding application window...
+[Jun 01, 2026 | 10:39:00 PM] INFO  | Kiero initialized with DX12. Bound Present + ExecuteCommandLists.
+[Jun 01, 2026 | 10:39:00 PM] INFO  | Found application window: ELDEN RING NIGHTREIGN (hwnd=0x0000000000100912, method=enumeration, attempts=1, elapsed_ms=0)
+[Jun 01, 2026 | 10:39:02 PM] INFO  | ImGui (DX12) initialized successfully.
+[Jun 01, 2026 | 10:39:33 PM] INFO  | Auto-Calibration: Captured vanilla speed baseline = 72.9
